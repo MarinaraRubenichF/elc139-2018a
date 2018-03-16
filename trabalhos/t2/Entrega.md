@@ -15,19 +15,19 @@ Disciplina: ELC139 - Programação Paralela <br/>Aluna: Marinara Rübenich Fumag
     - Parte 1
     - Parte 2
 4. **Referências**
-## Parte 1
+## 1. Parte 1
 ### Perfil de Execução - Alteração
  #### (a) O perfil é afetado pelas opções de configuração?
 ### Perfil de Execução - Paralelização
 #### (b) Pelo perfil de execução, há alguma função que poderia ser candidata a paralelização? Por quê?
-## Parte 2
+## 2. Parte 2
 ### Profilers - Particularidades e Curiosidades
 #### (a) Particularidades de instalação, recursos ou funcionamento dos profilers
 ### Profilers - Dúvidas e Dificuldades
 #### (b) dúvidas e/ou dificuldades encontradas
 ### Profilers - Resultados
 #### (c) resultados obtidos 
-## Anexos
+## 3. Anexos
 ### Parte 1
 ### Parte 2
-## Referências
+## 4. Referências
