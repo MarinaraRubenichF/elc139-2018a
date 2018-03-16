@@ -31,3 +31,5 @@ Disciplina: ELC139 - Programação Paralela <br/>Aluna: Marinara Rübenich Fumag
 ### a. Parte 1
 ### b. Parte 2
 ## 4. Referências
+- Timothy Prickett Morgan. IBM recasts Power 775 Blue Waters super as big data muncher. [Link](https://www.theregister.co.uk/2012/11/23/ibm_gpfs_storage_server/).
+- Intel. Intel® Core™ i5-5200U Processor. [Link](https://ark.intel.com/products/85212/Intel-Core-i5-5200U-Processor-3M-Cache-up-to-2_70-GHz).
