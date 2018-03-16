@@ -9,7 +9,7 @@ Disciplina: ELC139 - Programação Paralela <br/>Aluna: Marinara Rübenich Fumag
     b. [Perfil de Execução - Paralelização](Entrega.md#b-perfil-de-execução---paralelização)
 2. [**Parte 2**](Entrega.md#1-parte-1)  
     a. [Profilers - Particularidades e Curiosidades](Entrega.md#a-profilers---particularidades)  
-    b. [Profilers - Dúvidas e Dificuldades](Entrega.md#b-profilers---duvidas-e-dificuldades)  
+    b. [Profilers - Dúvidas e Dificuldades](Entrega.md#b-profilers---dúvidas-e-dificuldades)  
     c. [Profilers - Resultados](Entrega.md#c-profilers---resultados)  
 3. [**Anexos**](Entrega.md#3-anexos)  
     a. [Parte 1](Entrega.md#a-parte-1)  
