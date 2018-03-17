@@ -21,7 +21,7 @@ Disciplina: ELC139 - Programação Paralela <br/>Professora: Andrea Schwertner C
  Sim. (analisando melhor antes de responder).
 ### b. Perfil de Execução - Paralelização
 #### Pelo perfil de execução, há alguma função que poderia ser candidata a paralelização? Por quê?
-Sim, esta função é a 'dot_product', pois pude pra notar através das minhas tentativas que ele chegou a tomar 100x mais de tempo do que as outras funções [[Vide Screenshots](Parte 1/Screenshots)]. Como o tempo total de execução do programa em si não é influenciado por entradas (que são dadas apenas no início) mas sim pelo processador, paralelizar esta função nos daria um ganho extremamente considerável no desempenho.
+Sim, esta função é a 'dot_product', pois pude notar, através das minhas tentativas, que quanto maior o tempo de repetição, mais "absurda" é a discrepância no tempo de processamento, em um dado momento ela chegou a tomar 100x mais de tempo do que as outras funções [[Vide Screenshot](Parte_1/Screenshots/2.5.1.Gprof-Flat_Profile(config.50000_200).png)]. Como o tempo total de execução do programa em si não é influenciado por entradas (que são dadas apenas no início) mas sim pelo processador, paralelizar esta função nos daria um ganho extremamente considerável no desempenho.
 ## 2. Parte 2
 ### a. Profilers - Particularidades
 #### Particularidades de instalação, recursos ou funcionamento dos profilers
