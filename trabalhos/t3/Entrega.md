@@ -134,7 +134,7 @@ Aluna: Marinara Rübenich Fumagalli
 ### a. Parte 1
 
 * Implemente um programa equivalente a [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.  
-    * Aqui segue o código do programa [openmp](openmp/omp_dotprod.c).
+    * Aqui segue o código do programa em OpenMP: [omp_dotprod.c](openmp/omp_dotprod.c).
 
 ### b. Parte 2
 
