@@ -104,9 +104,9 @@ Aluna: Marinara Rübenich Fumagalli
     2 thread(s), 3842238 usec
     ```
     
-    SpeedUp (nesse caso) = 1,9167...
-    Os mais diversos testes realizados com esses mesmos valores não tiveram grandes variações.
-
+    `SpeedUp (nesse caso) = 1,9167...`  
+    Os mais diversos testes realizados com esses mesmos valores não tiveram grandes variações, este é o de melhor resultado.
+    
 ### c. Questão 3
 * A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
