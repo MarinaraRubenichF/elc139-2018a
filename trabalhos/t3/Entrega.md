@@ -41,7 +41,7 @@ Aluna: Marinara Rübenich Fumagalli
         ``` 
         Ou seja, cada thread vai resolver uma parte do problema e ir se multiplicando até chegar ao valor final. Nesse caso a thread funciona com vetores, inicia no *start* e termina no *end*. 
         
-     * **Comunicação**
+     * **Comunicação**  
      A ***Comunicação*** se dá quando temos estruturas e algoritmos necessários para comunicação. A parte do [código](pthreads_dotprod/pthreads_dotprod.c) que faz isso também está relacionada a função *dotprod_worker*:
      
         ```c
@@ -54,7 +54,7 @@ Aluna: Marinara Rübenich Fumagalli
         
     Isso ocorre através da *Exclusão Mútua* ou *Mutex*, que controla a concorrência, ou seja, enquanto uma thread está acessando *x* parte do código e não finalizou a outra thread não pode acessá-lo. Nesse caso a variável *dotdata* recebe os resultados dos cálculos de cada thread, por isso ela se encontra envolta pelos *Mutex*.
     
-    * **Aglomeração**
+    * **Aglomeração**  
     A ***Aglomeração***, diferente do particionamento, aglomera (une) as tarefas para melhorar o desempenho. A parte do [código](pthreads_dotprod/pthreads_dotprod.c) que faz isso também está relacionada a função *dotprod_worker*:
     
         ```
@@ -70,7 +70,7 @@ Aluna: Marinara Rübenich Fumagalli
     
     Sua função é se agrupar as multiplicações entre os vetores (que resultam somas parciais que são armazenadas na variável *mysum*) até chegarmos no resultado final.
     
-    * **Mapeamento**
+    * **Mapeamento**  
     No ***Mapeamento*** ocorre a distribuição homogênea das tarefas a serem executados pelo processador. A função responsável por isso no [código](pthreads_dotprod/pthreads_dotprod.c) é a *dotprod_threads*:
     
         ```
