@@ -110,9 +110,32 @@ Aluna: Marinara Rübenich Fumagalli
 ### c. Questão 3
 * A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
 
+    Foram realizados diversos testes, a tabela com as informações completas dos mesmos está listada na questão abaixo ([questão 4](#a-questão-4)).
+
 ### d. Questão 4
 
 * Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
+   
+   | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | Speed Up |
+    | :------: | :------: | :------: | :------: | :------: |
+    | 1 | 10000 | 1000 | 0,040584 | 1 |
+    | 2 | 10000 | 1000 | 0,020817 | 1,949 |
+    | 4 | 10000 | 1000 | 0,014249 | 2,848 |
+    | 1 | 100000 | 1000 | 0,340260 | 1 |
+    | 2 | 100000 | 1000 | 0,177890 | 1,912 |
+    | 4 | 100000 | 1000 | 0,148651 | 2,288 |
+    | 1 | 1000000 | 1000 | 3,422067 | 1 |
+    | 2 | 1000000 | 1000 | 1,921225 | 1,781 |
+    | 4 | 1000000 | 1000 | 1,417739 | 2,413 |
+    | 1 | 10000 | 2000 | 0,040584 | 1 |
+    | 2 | 10000 | 2000 | 0,020817 | 2,236 |
+    | 4 | 10000 | 2000 | 0,014249 | 2,787 |
+    | 1 | 100000 | 2000 | 0,340260 | 1 |
+    | 2 | 100000 | 2000 | 0,177890 | 1,826 |
+    | 4 | 100000 | 2000 | 0,148651 | 2,415 |
+    | 1 | 1000000 | 2000 | 3,422067 | 1 |
+    | 2 | 1000000 | 2000 | 1,921225 | 1,800 |
+    | 4 | 1000000 | 2000 | 1,417739 | 2,443 |
 
 ### e. Questão 5
 
@@ -127,7 +150,7 @@ Aluna: Marinara Rübenich Fumagalli
     ...
     ```
     
-    Como explicado na questão 1 essas linhas de código garantem os acessos a Região Crítica, então isso garante que mais de uma thread não acesse a masma parte *x* ao mesmo tempo, garantindo a segurança e confiabilidade dos cálculos.
+    Como explicado na [questão 1](#a-questão-1) essas linhas de código certificam os acessos a Região Crítica, então isso garante que mais de uma thread não acesse a masma parte *x* ao mesmo tempo, garantindo a segurança e confiabilidade dos cálculos.
 
 ## 2. Implementação OpenMP
 
@@ -139,6 +162,27 @@ Aluna: Marinara Rübenich Fumagalli
 ### b. Parte 2
 
 * Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX. 
+    
+    | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | Speed Up |
+    | :------: | :------: | :------: | :------: | :------: |
+    | 1 | 10000 | 1000 | 0,035499 | 1 |
+    | 2 | 10000 | 1000 | 0,035091 | 1,011 |
+    | 4 | 10000 | 1000 | 0,040354 | 0,871 |
+    | 1 | 100000 | 1000 | 0,348776 | 1 |
+    | 2 | 100000 | 1000 | 0,347112 | 1,004 |
+    | 4 | 100000 | 1000 | 0,338735 | 1,029 |
+    | 1 | 1000000 | 1000 | 3,419815 | 1 |
+    | 2 | 1000000 | 1000 | 3,409780 | 1,002 |
+    | 4 | 1000000 | 1000 | 3,448558 | 0,991 |
+    | 1 | 10000 | 2000 | 0,067806 | 1 |
+    | 2 | 10000 | 2000 | 0,074319 | 0,912 |
+    | 4 | 10000 | 2000 | 0,072561 | 0,934 |
+    | 1 | 100000 | 2000 | 0,685385 | 1 |
+    | 2 | 100000 | 2000 | 0,686837 | 0,997 |
+    | 4 | 100000 | 2000 | 0,680609 | 1,007 |
+    | 1 | 1000000 | 2000 | 6,788940 | 1 |
+    | 2 | 1000000 | 2000 | 6,817261 | 0,995 |
+    | 4 | 1000000 | 2000 | 6,858428 | 0,989 |
 
 ## 3. Referências
 - Geyer, Cláudio. OpenMP: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf).
