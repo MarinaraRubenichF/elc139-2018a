@@ -109,15 +109,15 @@ Aluna: Marinara Rübenich Fumagalli
     Os mais diversos testes realizados com esses mesmos valores não tiveram grandes variações, este é o de melhor resultado.
     
 ### c. Questão 3
-* A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do computador, tempos muito pequenos, etc.
+* A aceleração (speedup) se sustenta para outros tamanhos de vetores, números de threads e repetições? Para responder a essa questão, você terá que realizar diversas execuções, variando o tamanho do problema (tamanho dos vetores e número de repetições) e o número de threads (1, 2, 4, 8..., dependendo do número de núcleos). Cada caso deve ser executado várias vezes, para depois calcular-se um tempo de processamento médio para cada caso. Atenção aos fatores que podem interferir na confiabilidade da medição: uso compartilhado do         computador, tempos muito pequenos, etc.
 
-    Foram realizados diversos testes, a tabela com as informações completas dos mesmos está listada na questão abaixo ([questão 4](#a-questão-4)).
+    * Foram realizados diversos testes, a tabela com as informações completas dos mesmos está listada na questão abaixo ([questão 4](#d-questão-4)).
 
 ### d. Questão 4
 
 * Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
    
-   | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | SpeedUp |
+   | Nº Threads | Tam. Vetor | Nº Repetições | Tempo (s) | SpeedUp |
     | :------: | :------: | :------: | :------: | :------: |
     | 1 | 10000 | 1000 | 0,040584 | 1 |
     | 2 | 10000 | 1000 | 0,020817 | 1,949  |
@@ -151,7 +151,7 @@ Aluna: Marinara Rübenich Fumagalli
         ...
         ```
     
-    Como explicado na [questão 1](#a-questão-1) essas linhas de código certificam os acessos a Região Crítica, então isso garante que mais de uma thread não acesse a masma parte *x* ao mesmo tempo, garantindo a segurança e confiabilidade dos cálculos.
+        Como explicado na [questão 1](#a-questão-1) essas linhas de código certificam os acessos a Região Crítica, então isso garante que mais de uma thread não acesse a masma parte *x* ao mesmo tempo, garantindo a segurança e confiabilidade dos cálculos.
 
 ## 2. Implementação OpenMP
 
@@ -164,7 +164,7 @@ Aluna: Marinara Rübenich Fumagalli
 
 * Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.   
     
-    | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | SpeedUp | 
+    | Nº Threads | Tam. Vetor | Nº Repetições | Tempo (s) | SpeedUp | 
     | :-------: | :-------: | :-------: | :-------: | :-------: |  
     | 1 | 10000 | 1000 | 0,035499 | 1 |
     | 2 | 10000 | 1000 | 0,035091 | 1,011 |  
@@ -208,7 +208,7 @@ Aluna: Marinara Rübenich Fumagalli
     | 0,995 | 1,800 |
     | 0,989 | 2,443 |
     
-    A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso não vale a pena paralelizar utilizando o OpenMP pois seu desempenho foi bem inferior ao do Pthreads, inclusive algumas vezes foi menor do que quando se utilizei apenas 1 thread.
+     A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso não vale a pena paralelizar utilizando o OpenMP pois seu desempenho foi bem inferior ao do Pthreads, inclusive algumas vezes foi menor do que quando se utilizei apenas 1 thread.
 
 ## 3. Referências
 - Geyer, Cláudio. OpenMP: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf).
