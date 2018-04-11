@@ -104,7 +104,8 @@ Aluna: Marinara Rübenich Fumagalli
     2 thread(s), 3842238 usec
     ```
     
-    `SpeedUp (nesse caso) = 1,9167...`  
+    >SpeedUp (nesse caso) = 1,9167...  
+    
     Os mais diversos testes realizados com esses mesmos valores não tiveram grandes variações, este é o de melhor resultado.
     
 ### c. Questão 3
@@ -116,10 +117,10 @@ Aluna: Marinara Rübenich Fumagalli
 
 * Elabore um gráfico/tabela de aceleração a partir dos dados obtidos no exercício anterior.
    
-   | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | Speed Up |
+   | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | SpeedUp |
     | :------: | :------: | :------: | :------: | :------: |
     | 1 | 10000 | 1000 | 0,040584 | 1 |
-    | 2 | 10000 | 1000 | 0,020817 | 1,949 |
+    | 2 | 10000 | 1000 | 0,020817 | 1,949  |
     | 4 | 10000 | 1000 | 0,014249 | 2,848 |
     | 1 | 100000 | 1000 | 0,340260 | 1 |
     | 2 | 100000 | 1000 | 0,177890 | 1,912 |
@@ -142,13 +143,13 @@ Aluna: Marinara Rübenich Fumagalli
 * Explique as diferenças entre [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) e [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c). Com as linhas removidas, o programa está correto? 
     * No código [pthreads_dotprod2.c](pthreads_dotprod/pthreads_dotprod2.c) foram tiradas as linhas equivalentes ao *Mutex*:
    
-   ```c
-    ...
-    pthread_mutex_lock (&mutexsum);
-    //dotdata.c += mysum;
-    pthread_mutex_unlock (&mutexsum);
-    ...
-    ```
+       ```c
+        ...
+        pthread_mutex_lock (&mutexsum);
+        //dotdata.c += mysum;
+        pthread_mutex_unlock (&mutexsum);
+        ...
+        ```
     
     Como explicado na [questão 1](#a-questão-1) essas linhas de código certificam os acessos a Região Crítica, então isso garante que mais de uma thread não acesse a masma parte *x* ao mesmo tempo, garantindo a segurança e confiabilidade dos cálculos.
 
@@ -161,13 +162,13 @@ Aluna: Marinara Rübenich Fumagalli
 
 ### b. Parte 2
 
-* Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX. 
+* Avalie o desempenho do programa em OpenMP, usando os mesmos dados/argumentos do programa com threads POSIX.   
     
-    | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | Speed Up |
-    | :------: | :------: | :------: | :------: | :------: |
+    | Nº Threads | Tam. Vetor | Nº Repetições | Tempo(s) | SpeedUp | 
+    | :-------: | :-------: | :-------: | :-------: | :-------: |  
     | 1 | 10000 | 1000 | 0,035499 | 1 |
-    | 2 | 10000 | 1000 | 0,035091 | 1,011 |
-    | 4 | 10000 | 1000 | 0,040354 | 0,871 |
+    | 2 | 10000 | 1000 | 0,035091 | 1,011 |  
+    | 4 | 10000 | 1000 | 0,040354 | 0,871 |  
     | 1 | 100000 | 1000 | 0,348776 | 1 |
     | 2 | 100000 | 1000 | 0,347112 | 1,004 |
     | 4 | 100000 | 1000 | 0,338735 | 1,029 |
@@ -182,10 +183,37 @@ Aluna: Marinara Rübenich Fumagalli
     | 4 | 100000 | 2000 | 0,680609 | 1,007 |
     | 1 | 1000000 | 2000 | 6,788940 | 1 |
     | 2 | 1000000 | 2000 | 6,817261 | 0,995 |
-    | 4 | 1000000 | 2000 | 6,858428 | 0,989 |
+    | 4 | 1000000 | 2000 | 6,858428 | 0,989 | 
+    
+    Utilizando os mesmos valores descritos acima, respectivamente:
+    
+    | SpeedUp OpenMP | SpeedUp Pthreads |
+    | :-------: | :-------: |
+    | 1 | 1 |
+    | 1,011 | 1,949 |
+    | 0,871 | 2,848 |
+    | 1 | 1 |
+    | 1,004 | 1,912 |
+    | 1,029 | 2,288 |
+    | 1 | 1 |
+    | 1,002 | 1,781 |
+    | 0,991 | 2,413 |
+    | 1 | 1 |
+    | 0,912 | 2,236 |
+    | 0,934 | 2,787 |
+    | 1 | 1 |
+    | 0,997 | 1,826 |
+    | 1,007 | 2,415 |
+    | 1 | 1 |
+    | 0,995 | 1,800 |
+    | 0,989 | 2,443 |
+    
+    A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso não vale a pena paralelizar utilizando o OpenMP pois seu desempenho foi bem inferior ao do Pthreads, inclusive algumas vezes foi menor do que quando se utilizei apenas 1 thread.
 
 ## 3. Referências
 - Geyer, Cláudio. OpenMP: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf).
+- Geyer, Cláudio. Programação Pararela: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2014-1/pp03-tecnicas-MPI-Andre-v18d6-mai2014-win.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2014-1/pp03-tecnicas-MPI-Andre-v18d6-mai2014-win.pdf).
 - Wilkinson, Barry; Allen, Michael. Parallel Programming. Livro.
 - Chandra, Rohit. Parallel Programming in OpenMP. Livro.
+- Cygwin. Cygwin User's Guide. [Link](https://cygwin.com/cygwin-ug-net.html).
 
