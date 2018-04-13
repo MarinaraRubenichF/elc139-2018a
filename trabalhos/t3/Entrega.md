@@ -158,7 +158,7 @@ Aluna: Marinara Rübenich Fumagalli
 ### a. Parte 1
 
 * Implemente um programa equivalente a [pthreads_dotprod.c](pthreads_dotprod/pthreads_dotprod.c) usando OpenMP.  
-    * Aqui segue o código do programa em OpenMP: [omp_dotprod.c](openmp/omp_dotprod.c).
+    * Aqui segue o código do programa em OpenMP: [omp_dotprod.c](openmp/omp_dotprod2.c).
 
 ### b. Parte 2
 
@@ -166,49 +166,49 @@ Aluna: Marinara Rübenich Fumagalli
     
     | Nº Threads | Tam. Vetor | Nº Repetições | Tempo (s) | SpeedUp | 
     | :-------: | :-------: | :-------: | :-------: | :-------: |  
-    | 1 | 10000 | 1000 | 0,035499 | 1 |
-    | 2 | 10000 | 1000 | 0,035091 | 1,011 |  
-    | 4 | 10000 | 1000 | 0,040354 | 0,871 |  
-    | 1 | 100000 | 1000 | 0,348776 | 1 |
-    | 2 | 100000 | 1000 | 0,347112 | 1,004 |
-    | 4 | 100000 | 1000 | 0,338735 | 1,029 |
-    | 1 | 1000000 | 1000 | 3,419815 | 1 |
-    | 2 | 1000000 | 1000 | 3,409780 | 1,002 |
-    | 4 | 1000000 | 1000 | 3,448558 | 0,991 |
-    | 1 | 10000 | 2000 | 0,067806 | 1 |
-    | 2 | 10000 | 2000 | 0,074319 | 0,912 |
-    | 4 | 10000 | 2000 | 0,072561 | 0,934 |
-    | 1 | 100000 | 2000 | 0,685385 | 1 |
-    | 2 | 100000 | 2000 | 0,686837 | 0,997 |
-    | 4 | 100000 | 2000 | 0,680609 | 1,007 |
-    | 1 | 1000000 | 2000 | 6,788940 | 1 |
-    | 2 | 1000000 | 2000 | 6,817261 | 0,995 |
-    | 4 | 1000000 | 2000 | 6,858428 | 0,989 | 
+    | 1 | 10000 | 1000 | 0,036329 | 1 |
+    | 2 | 10000 | 1000 | 0,023484 | 1,546 |  
+    | 4 | 10000 | 1000 | 0,014688 | 2,473 |  
+    | 1 | 100000 | 1000 | 0,366648 | 1 |
+    | 2 | 100000 | 1000 | 0,207031 | 1,770 |
+    | 4 | 100000 | 1000 | 0,176510 | 2,077 |
+    | 1 | 1000000 | 1000 | 3,566208 | 1 |
+    | 2 | 1000000 | 1000 | 1,962294 | 1,817 |
+    | 4 | 1000000 | 1000 | 1,348562 | 2,644 |
+    | 1 | 10000 | 2000 | 0,072802 | 1 |
+    | 2 | 10000 | 2000 | 0,040024 | 1,818 |
+    | 4 | 10000 | 2000 | 0,027360 | 2,660 |
+    | 1 | 100000 | 2000 | 0,701296 | 1 |
+    | 2 | 100000 | 2000 | 0,379013 | 1,850 |
+    | 4 | 100000 | 2000 | 0,261394 | 2,682 |
+    | 1 | 1000000 | 2000 | 7,072570 | 1 |
+    | 2 | 1000000 | 2000 | 3,931356 | 1,799 |
+    | 4 | 1000000 | 2000 | 2,653330 | 2,665 | 
     
     Utilizando os mesmos valores descritos acima, respectivamente:
     
     | SpeedUp OpenMP | SpeedUp Pthreads |
     | :-------: | :-------: |
     | 1 | 1 |
-    | 1,011 | 1,949 |
-    | 0,871 | 2,848 |
+    | 1,546 | 1,949 |
+    | 2,473 | 2,848 |
     | 1 | 1 |
-    | 1,004 | 1,912 |
-    | 1,029 | 2,288 |
+    | 1,770 | 1,912 |
+    | 2,077 | 2,288 |
     | 1 | 1 |
-    | 1,002 | 1,781 |
-    | 0,991 | 2,413 |
+    | 1,817 | 1,781 |
+    | 2,644 | 2,413 |
     | 1 | 1 |
-    | 0,912 | 2,236 |
-    | 0,934 | 2,787 |
+    | 1,818 | 2,236 |
+    | 2,660 | 2,787 |
     | 1 | 1 |
-    | 0,997 | 1,826 |
-    | 1,007 | 2,415 |
+    | 1,850 | 1,826 |
+    | 2,682 | 2,415 |
     | 1 | 1 |
-    | 0,995 | 1,800 |
-    | 0,989 | 2,443 |
+    | 1,799 | 1,800 |
+    | 2,665 | 2,443 |
     
-     A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso não vale a pena paralelizar utilizando o OpenMP pois seu desempenho foi bem inferior ao do Pthreads, inclusive algumas vezes foi menor do que quando se utilizei apenas 1 thread.
+     A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso pode ser utilizado tanto Pthreads como OpenMP. Em 7 das 12 ocasiões o Pthreads teve uma aceleração maior, já em 5 delas usar OpenMP foi melhor, ou seja, estão praticamente meio a meio. Porém o uso do OpenMP reduziu um número considerável de linhas, chegando a fazer operações mais complexas com apenas uma linha.
 
 ## 3. Referências
 - Geyer, Cláudio. OpenMP: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf).
