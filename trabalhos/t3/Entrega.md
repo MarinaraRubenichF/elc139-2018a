@@ -208,7 +208,7 @@ Aluna: Marinara Rübenich Fumagalli
     | 1,799 | 1,800 |
     | 2,665 | 2,443 |
     
-     A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso pode ser utilizado tanto Pthreads como OpenMP. Em 7 das 12 ocasiões o Pthreads teve uma aceleração maior, já em 5 delas usar OpenMP foi melhor, ou seja, estão praticamente meio a meio. Porém o uso do OpenMP reduziu um número considerável de linhas, chegando a fazer operações mais complexas com apenas uma linha.
+     A partir dessa tabela de comparações de SpeedUps usando OpenMP e usando Pthreads posso concluir que para este caso pode ser utilizado tanto Pthreads como OpenMP. Em geral o Pthreads teve tempos de execução bem menores e o SpeedUp dele em 7 das 12 ocasiões teve uma aceleração maior, já em 5 delas usar OpenMP foi melhor. Porém o uso do OpenMP reduziu um número considerável de linhas, chegando a fazer operações mais complexas com apenas uma linha. Então é bem relativo saber qual utilizar, pois os tempos de execução são relativamente curtos. Nesse caso eu escolheria o Pthreads.
 
 ## 3. Referências
 - Geyer, Cláudio. OpenMP: Uma Introdução. [ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf](ftp://ftp.inf.ufrgs.br/pub/geyer/PDP-CIC-ECP/slidesAlunos/SemestresAnteriores/ProvaP2-2013-1/OpenMP-intro-v5d3-jun2013-mac.pdf).
