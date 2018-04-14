@@ -1,7 +1,7 @@
 /*
  *  Exemplo de cálculo de produto escalar utilizando OpenMP
- 	Marinara Rübenich Fumagalli
- 	mrfumagalli@inf.ufsm.br
+    Marinara Rübenich Fumagalli
+    mrfumagalli@inf.ufsm.br
  */
  
 #include <stdio.h>
@@ -22,9 +22,8 @@ typedef struct
 dotdata_t dotdata;
 
 /*
- * Funcao paralelizada com OpenMP
+ * Utilização do OpenMP
  */
- 
 void omp_dotprod()
 {
 	int i, k;
@@ -33,7 +32,7 @@ void omp_dotprod()
 	int wsize = dotdata.wsize;    
 	double mysum;
 
-	#pragma omp parallel shared (a, b) private (k, i, mysum)
+	#pragma omp parallel shared (a, b) private (i, k, mysum)
 	{
 		for (k = 0; k < dotdata.repeat; k++) {
 			mysum = 0.0;
@@ -43,7 +42,7 @@ void omp_dotprod()
 			}
 		}
 		#pragma omp critical
-        dotdata.c += mysum;
+        	dotdata.c += mysum;
 	}
 }
 
