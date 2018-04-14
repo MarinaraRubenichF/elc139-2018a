@@ -1,6 +1,6 @@
 /*
- *  Exemplo de cálculo de produto escalar utilizando OpenMP
- 	Marinara Rübenich Fumagalli
+ *  Exemplo de cÃ¡lculo de produto escalar utilizando OpenMP
+ 	Marinara RÃ¼benich Fumagalli
  	mrfumagalli@inf.ufsm.br
  */
  
@@ -93,10 +93,6 @@ int main(int argc, char **argv)
    dotdata.c = 0.0;
    dotdata.wsize = wsize;
    dotdata.repeat = repeat;
-	
-   // Seta o número de threads
-   // Faltou esta linha para dar certo o programa...
-   omp_set_num_threads(nthreads);
    
    // Calcula c = a . b em nthreads, medindo o tempo
    start_time = wtime();
