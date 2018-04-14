@@ -18,7 +18,7 @@ typedef struct
    int repeat; 
  } dotdata_t;
 
-// Variavel global, acessivel por todas threads
+// Variável global, acessível por todas threads
 dotdata_t dotdata;
 
 /*
@@ -31,7 +31,8 @@ void omp_dotprod()
 	double *b = dotdata.b;
 	int wsize = dotdata.wsize;    
 	double mysum;
-
+	
+	//Shared = compartilhadas entre as threads. Private = privadas para cada thread.
 	#pragma omp parallel shared (a, b) private (i, k, mysum)
 	{
 		for (k = 0; k < dotdata.repeat; k++) {
@@ -41,8 +42,9 @@ void omp_dotprod()
 				mysum += (a[i] * b[i]);
 			}
 		}
+		//Cuida da região crítica
 		#pragma omp critical
-        	dotdata.c += mysum;
+        dotdata.c += mysum;
 	}
 }
 
@@ -68,7 +70,7 @@ void fill(double *a, int size, double value)
 }
 
 /*
- * Funcao principal
+ * Função principal
  */ 
 int main(int argc, char **argv)
 {
@@ -82,7 +84,7 @@ int main(int argc, char **argv)
 
    nthreads = atoi(argv[1]); 
    wsize = atoi(argv[2]);  // worksize = tamanho do vetor de cada thread
-   repeat = atoi(argv[3]); // numero de repeticoes dos calculos (para aumentar carga)
+   repeat = atoi(argv[3]); // numero de repetições dos cálculos (para aumentar carga)
 
    // Cria vetores
    dotdata.a = (double *) malloc(wsize*nthreads*sizeof(double));
@@ -93,12 +95,12 @@ int main(int argc, char **argv)
    dotdata.wsize = wsize;
    dotdata.repeat = repeat;
    
-   // Calcula c = a . b em nthreads, medindo o tempo
+   // Calcula c = a . b paalelamente, medindo o tempo
    start_time = wtime();
    omp_dotprod();
    end_time = wtime();
 
-   // Mostra resultado e estatisticas da execucao
+   // Mostra resultado e estatísticas da execução
    printf("%f\n", dotdata.c);
    printf("%d thread(s), %ld usec\n", nthreads, (long) (end_time - start_time));
    fflush(stdout);
