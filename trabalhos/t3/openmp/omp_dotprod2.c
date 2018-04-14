@@ -25,7 +25,7 @@ dotdata_t dotdata;
  * Funcao paralelizada com OpenMP
  */
  
-void dotprod_omp()
+void omp_dotprod()
 {
 	int i, k;
 	double *a = dotdata.a;
@@ -96,7 +96,7 @@ int main(int argc, char **argv)
    
    // Calcula c = a . b em nthreads, medindo o tempo
    start_time = wtime();
-   dotprod_omp();
+   omp_dotprod();
    end_time = wtime();
 
    // Mostra resultado e estatisticas da execucao
