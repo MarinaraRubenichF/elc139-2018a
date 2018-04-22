@@ -33,6 +33,7 @@ main(int argc, char* argv[])
    int forest_size = 30;
    int n_trials = 5000;
    int n_probs = 101;
+   long start_time, end_time;
 
    double* percent_burned; // percentuais queimados (saída)
    double* prob_spread;    // probabilidades (entrada)
