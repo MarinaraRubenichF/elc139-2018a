@@ -2,7 +2,7 @@ CXX       = g++
 CXXFLAGS  = -fopenmp -Wall -I.
 
 PROGRAM   = firesim
-SRCS      = firesim.cpp Random.cpp Forest.cpp
+SRCS      = firesimOMP2.cpp Random.cpp Forest.cpp
 OBJS      = $(SRCS:.cpp=.o)
 
 .SUFFIXES: .cpp .o
