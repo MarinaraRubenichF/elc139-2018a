@@ -6,7 +6,7 @@
 
 2. A [Pasta 2](2.FireSim_OpenMP1) contém a 1ª solução paralelizada do programa.
 
-3. A [Pasta 3](3.FireSim_OpenMP2) contem a 2ª solução paralelizada do programa.
+3. A [Pasta 3](3.FireSim_OpenMP2) contém a 2ª solução paralelizada do programa.
 
 ### Obs.:
 
