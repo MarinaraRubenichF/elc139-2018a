@@ -1,12 +1,13 @@
 //  
-// Simulação de incêndio em uma floresta.
-// Baseada no código proposto por David Joiner.
+// SimulaÃ§Ã£o de incÃªndio em uma floresta.
+// Baseada no cÃ³digo proposto por David Joiner.
 //
 // Uso: firesim <tamanho-do-problema> <nro. experimentos> <probab. maxima> 
 
 #include <cstdio>
 #include <cstdlib>
 #include <iostream>
+#include <sys/time.h>
 #include "Random.h"
 #include "Forest.h"
 
@@ -28,12 +29,12 @@ int
 main(int argc, char* argv[]) 
 {
    
-   // parâmetros dos experimentos
+   // parÃ¢metros dos experimentos
    int forest_size = 30;
    int n_trials = 5000;
    int n_probs = 101;
 
-   double* percent_burned; // percentuais queimados (saída)
+   double* percent_burned; // percentuais queimados (saÃ­da)
    double* prob_spread;    // probabilidades (entrada)
    double prob_min = 0.0;
    double prob_max = 1.0;
@@ -43,7 +44,7 @@ main(int argc, char* argv[])
    checkCommandLine(argc, argv, forest_size, n_trials, n_probs);
     
    try {
-
+      start_time = wtime();
       Forest* forest = new Forest(forest_size);
       Random rand;
 
@@ -54,21 +55,21 @@ main(int argc, char* argv[])
 
       printf("Probabilidade, Percentual Queimado\n");
 
-      // para cada probabilidade, calcula o percentual de árvores queimadas
+      // para cada probabilidade, calcula o percentual de Ã¡rvores queimadas
       for (int ip = 0; ip < n_probs; ip++) {
 
          prob_spread[ip] = prob_min + (double) ip * prob_step;
          percent_burned[ip] = 0.0;
-         rand.setSeed(base_seed+ip); // nova seqüência de números aleatórios
+         rand.setSeed(base_seed+ip); // nova seqÃ¼Ãªncia de nÃºmeros aleatÃ³rios
 
-         // executa vários experimentos
+         // executa vÃ¡rios experimentos
          for (int it = 0; it < n_trials; it++) {
-            // queima floresta até o fogo apagar
+            // queima floresta atÃ© o fogo apagar
             forest->burnUntilOut(forest->centralTree(), prob_spread[ip], rand);
             percent_burned[ip] += forest->getPercentBurned();
          }
 
-         // calcula média dos percentuais de árvores queimadas
+         // calcula mÃ©dia dos percentuais de Ã¡rvores queimadas
          percent_burned[ip] /= n_trials;
 
          // mostra resultado para esta probabilidade
@@ -77,6 +78,9 @@ main(int argc, char* argv[])
 
       delete[] prob_spread;
       delete[] percent_burned;
+      
+      end_time = wtime();
+      printf("\nTempo em microssegundos: %ld\n", (long) (end_time - start_time));
    }
    catch (std::bad_alloc)
    {
