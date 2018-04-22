@@ -19,7 +19,7 @@ Cygwin 2.10.0
 g++ (GCC) 6.4.0
 
 **Arquitetura:**  
-Intel® Core™ i5-5200U  
+Intel® Core™ i5-6200U  
 2,2 GHz até 2,7 GHz  
 2 núcleos, 2 threads por núcleo  
 4GB RAM, 1TB HD  
