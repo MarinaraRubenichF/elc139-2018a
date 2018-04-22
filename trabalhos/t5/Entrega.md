@@ -21,21 +21,21 @@ Aluna: Marinara Rübenich Fumagalli
 
 ### a. Solução 1
 
-[FireSim OpenMP - Solução 1](FireSimOpenMP1/Códigos/firesimOpenMP_1.cpp).
+[FireSim OpenMP - Solução 1](FireSim/2.FireSim_OpenMP1/Códigos).
 
 ### b. Solução 2
 
-[FireSim OpenMP - Solução 2](FireSimOpenMP2/Códigos/firesimOpenMP_2.cpp).
+[FireSim OpenMP - Solução 2](FireSim/3.FireSim_OpenMP2/Códigos).
 
 ## 2. Links para os Slides
 
 ### a. Solução 1
 
-[Slides FireSim OpenMP - Solução 1](FireSimOpenMP1/firesimOpenMP_1.pdf).
+[Slides FireSim OpenMP - Solução 1](FireSim/2.FireSim_OpenMP1/firesimOMP1.pdf).
 
 ### b. Solução 2
 
-[Slides FireSim OpenMP - Solução 2](FireSimOpenMP2/firesimOpenMP_2.pdf).
+[Slides FireSim OpenMP - Solução 2](FireSim/2.FireSim_OpenMP2/firesimOMP2.pdf).
 
 ## 3. Referências
 - Chandra, Rohit. Parallel Programming in OpenMP. Livro.
