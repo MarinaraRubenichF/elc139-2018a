@@ -23,7 +23,7 @@ Aluna: Marinara Rübenich Fumagalli
 
 ## 1. Casos de Teste
 
-* O programa em OpenMP se encontra aqui: [OpenMPDemoABC.cpp](Códigos/OpenMPDemoABC.cpp). Nesta seção serão mostradas as partes do código que tratam de cada Schedule, na seção 2 serão mostrados os resultados obtidos em cada tipo. Para cada um deles foi implementado um resultado correto (com exclusão mútua) e um incorreto (sem exclusão mútua), isso nos dá uma melhor visão das diferenças dos tratamentos que o OpenMP faz.
+* O programa em OpenMP se encontra aqui: [OpenMPDemoABC.cpp](Códigos/OpenMPDemoABC.cpp). Nesta seção serão mostradas as partes do código que tratam de cada Schedule, na seção 2 serão mostrados os resultados obtidos em cada tipo. Para cada um deles foi implementado um resultado correto (com exclusão mútua) e um incorreto (sem exclusão mútua), isso nos dá uma melhor visão das diferenças dos tratamentos que o OpenMP faz.  
 *\*Schedule: define como as iterações serão divididas entre as threads paralelamente. Existem 5 tipos, são eles:*
 
 ### a. Auto
