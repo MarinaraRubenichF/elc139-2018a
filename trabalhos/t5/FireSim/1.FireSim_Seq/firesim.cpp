@@ -25,6 +25,16 @@ checkCommandLine(int argc, char** argv, int& size, int& trials, int& probs)
    }   
 }
 
+/*
+ * Tempo (wallclock) em microssegundos
+ */ 
+long wtime()
+{
+   struct timeval t;
+   gettimeofday(&t, NULL);
+   return t.tv_sec*1000000 + t.tv_usec;
+}
+
 int 
 main(int argc, char* argv[]) 
 {
