@@ -23,7 +23,7 @@ Aluna: Marinara Rübenich Fumagalli
 Pasta [Códigos](nQueens/1.nQueens_Seq/Códigos).  
 Código Sequencial [nQueens](nQueens/1.nQueens_Seq/Códigos/nqueens.c).
 
-### b. Solução 1
+### b. Soluções
 
 Pasta [Códigos](nQueens/1.nQueens_OpenMP/Códigos).  
 Código com OpenMP [nQueens](nQueens/2.nQueens_OpenMP/Códigos/nqueensOMP.c).
