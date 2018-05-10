@@ -43,5 +43,5 @@ Slides [Soluções_nQueens.pdf](nQueens/2.nQueens_OpenMP/Soluções_nQueens.pdf)
 - Chandra, Rohit. Parallel Programming in OpenMP. Livro.
 - Swan, Tom. Aprendendo C++. Livro.
 - Barney, Blaise - LNLL. Tutorials OpenMP. [Link](https://computing.llnl.gov/tutorials/openMP/).
-- IBM Knowledge Center. [Link](https://www.ibm.com/support/knowledgecenter/SSGH2K_13.1.3/com.ibm.xlc1313.aix.doc/compiler_ref/prag_omp_atomic.html).
+- IBM Knowledge Center. Pragma directives for parallel processing. [Link](https://www.ibm.com/support/knowledgecenter/SSGH2K_13.1.3/com.ibm.xlc1313.aix.doc/compiler_ref/prag_omp_atomic.html).
 - Sobral, João Bosco M (UFSC). Exemplos de Diretivas e Cláusulas OpenMP. [Link](http://www.inf.ufsc.br/~bosco.sobral/ensino/ine5645/Exemplos-Diretivas-Clausulas.pdf).
