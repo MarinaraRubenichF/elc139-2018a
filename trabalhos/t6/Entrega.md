@@ -20,12 +20,12 @@ Aluna: Marinara Rübenich Fumagalli
 
 ### a. Sequencial
 
-Pasta [Códigos](nQueens/1.nQueens_Seq/Códigos).  
-Código Sequencial [nQueens](nQueens/1.nQueens_Seq/Códigos/nqueens.c).
+Pasta [Códigos](nQueens/1.nQueens_Seq).  
+Código Sequencial [nQueens](nQueens/1.nQueens_Seq/nqueens.c).
 
 ### b. Soluções
 
-Pasta [Códigos](nQueens/1.nQueens_OpenMP/Códigos).  
+Pasta [Códigos](nQueens/2.nQueens_OpenMP/Códigos).  
 Código com OpenMP [nQueens](nQueens/2.nQueens_OpenMP/Códigos/nqueensOMP.c).
 
 ## 2. Links para os Slides
