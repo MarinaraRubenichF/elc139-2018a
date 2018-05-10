@@ -4,7 +4,7 @@
 
 1. A [Pasta 1](1.nQueens_Seq) contém o programa original, sequencial.
 
-2. A [Pasta 2](2.nQueens_OpenmMP) contém a 1ª e a 2ª solução paralelizada do programa, basta modificar as linhas das diretivas.
+2. A [Pasta 2](2.nQueens_OpenMP) contém a 1ª e a 2ª solução paralelizada do programa, basta modificar as linhas das diretivas.
 
 ## Detalhes sobre o ambiente
 
@@ -28,7 +28,7 @@ Mais detalhes [aqui](https://ark.intel.com/products/85212/Intel-Core-i5-5200U-Pr
 
 ### Solução 1
 
-* Realizar a paralelização das soluções para cada posição inicial das n rainhas. Schedule dynamic, a distribuição é feita em tempo de execução e é o bloco quem decide a quantia de iterações que cada thread receberá.
+* Realizar a paralelização das soluções para cada posição das n rainhas. Schedule dynamic, a distribuição é feita em tempo de execução e é o bloco quem decide a quantia de iterações que cada thread receberá.
 
   * Para N de 10 a 15 (modifica N no código): `./nqueens`  
 
@@ -55,7 +55,7 @@ Mais detalhes [aqui](https://ark.intel.com/products/85212/Intel-Core-i5-5200U-Pr
   
 ### Solução 2
 
-* Realizar a paralelização das soluções para cada posição inicial das n rainhas. Schedule guided, a distribuição é feita em tempo de execução e é o bloco quem decide a quantia de iterações que cada thread receberá, essa quantia diminui até chegar a size.
+* Realizar a paralelização das soluções para cada posição das n rainhas. Schedule guided, a distribuição é feita em tempo de execução e é o bloco quem decide a quantia de iterações que cada thread receberá, essa quantia diminui até chegar a size.
 
   * Para N de 10 a 15 (modifica N no código): `./nqueens`  
 
