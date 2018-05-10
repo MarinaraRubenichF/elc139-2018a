@@ -3,7 +3,7 @@
 #include <time.h>
 #include <omp.h>
 
-#include "nqueens.h"
+#include "nqueensOMP.h"
 
 #define N 10
 
