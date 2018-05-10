@@ -9,7 +9,7 @@
 #include <stdio.h>
 #include <omp.h>
 
-#include "nqueens.h"
+#include "nqueensOMP.h"
 
 /* Checking information */
 static int solutions[] = {
