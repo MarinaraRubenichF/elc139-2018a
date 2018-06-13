@@ -7,37 +7,25 @@ Professora: Andrea Schwertner Charão
 Aluna: Marinara Rübenich Fumagalli
 
 ## Sumário
-1. [**Links para os Códigos**](#1-links-para-os-códigos)   
-    a. [Sequencial](#a-sequencial)  
-    b. [Soluções](#b-soluções)
-    
-2. [**Links para os Slides**](#2-links-para-os-slides)  
-    a. [Slides N-Rainhas](#a-slides-n--rainhas) 
-     
+1. [**Parte 1**](#1-parte-1)   
+    a. [Solução 1](#a-solução-1)      
+2. [**Parte 2**](#2-parte-2)  
+    a. [Solução 2](#a-solução-2)      
 3. [**Referências**](#3-referências)  
 
-## 1. Links para os Códigos
+## 1. Parte 1
 
-### a. Sequencial
+### a. Solução 1
 
 Pasta [Códigos](nQueens/1.nQueens_Seq).  
 Código Sequencial [nQueens](nQueens/1.nQueens_Seq/nqueens.c).
 
-### b. Soluções
+## 2. Parte 2
 
-Pasta [Códigos](nQueens/2.nQueens_OpenMP/Códigos).  
-Código com OpenMP [nQueens](nQueens/2.nQueens_OpenMP/Códigos/nqueensOMP.c).
-
-## 2. Links para os Slides
-
-### a. Slides N-Rainhas
+### a. Solução 2
 
 Pasta [nQueens](nQueens/2.nQueens_OpenMP).  
 Slides [Soluções_nQueens.pdf](nQueens/2.nQueens_OpenMP/Soluções_nQueens.pdf).
-
-### Obs.:
-
-* Maiores informações se encontram em [README.md](nQueens/README.md) e nos slides acima.
 
 ## 3. Referências
 - Chandra, Rohit. Parallel Programming in OpenMP. Livro.
