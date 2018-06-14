@@ -29,4 +29,4 @@ Código em MPI [matrix_mult_sr 2](Códigos/matrix_mult_sr_SOL2.c).
 
 ## 3. Referências
 - Wilkinson, Barry; Allen, Michael. Parallel Programming. Livro.
-- Barney, Blaise - LNLL. Message Passing Interface (MPI). [Link(https://computing.llnl.gov/tutorials/mpi).
+- Barney, Blaise - LNLL. Message Passing Interface (MPI). [Link](https://computing.llnl.gov/tutorials/mpi).
