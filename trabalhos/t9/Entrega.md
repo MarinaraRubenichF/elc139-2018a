@@ -18,4 +18,5 @@ Link para os [códigos](Códigos).
 Link para os [slides](Slides).
 
 ## 4. Referências
-- Teste. teste. [teste](https://www.ibm.com/support/knowledgecenter/SSGH2K_13.1.3/com.ibm.xlc1313.aix.doc/compiler_ref/prag_omp_atomic.html).
+- Wilkinson, Barry; Allen, Michael. Parallel Programming. Livro.
+- Teste. teste. [Teste](teste).
