@@ -23,4 +23,5 @@ Pasta com os [códigos](Parte_2).
 Pasta com os [códigos](Parte_3).
 
 ## 4. Referências
+- Wilkinson, Barry; Allen, Michael. Parallel Programming. Livro.
 - Teste. Teste. [Teste](teste).
