@@ -1,6 +1,6 @@
 [Programação Paralela](https://github.com/AndreaInfUFSM/elc139-2018a) > Trabalhos
 
-# T7: Primeiros passos com MPI
+# T9: Resolvendo um problema da maratona de programação paralela
 
 Disciplina: ELC139 - Programação Paralela  
 Professora: Andrea Schwertner Charão  
