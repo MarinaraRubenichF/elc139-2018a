@@ -35,10 +35,6 @@ Código com OpenMP [nQueens](nQueens/2.nQueens_OpenMP/Códigos/nqueensOMP.c).
 Pasta [nQueens](nQueens/2.nQueens_OpenMP).  
 Slides [Soluções_nQueens.pdf](nQueens/2.nQueens_OpenMP/Soluções_nQueens.pdf).
 
-### Obs.:
-
-* Maiores informações se encontram em [README.md](nQueens/README.md) e nos slides acima.
-
 ## 3. Referências
 - Chandra, Rohit. Parallel Programming in OpenMP. Livro.
 - Swan, Tom. Aprendendo C++. Livro.
