@@ -12,11 +12,13 @@ Aluna: Marinara Rübenich Fumagalli
 3. [**Referências**](#3-referências)  
 
 ## 1. Parte 1
-Link para os [códigos](Códigos).  
+Link para a pasta que contém os [códigos](Mandelbrot).  
 
 ## 2. Parte 2
-Link para os [slides](Slides).
+Link para os [slides](Conjunto_de_Mandelbrot-Paralelização.pdf).
 
-## 4. Referências
+## 3. Referências
 - Wilkinson, Barry; Allen, Michael. Parallel Programming. Livro.
-- Teste. teste. [Teste](teste).
+- University of Mary Washington. OpenMP Scheduling. [Link](http://cs.umw.edu/~finlayson/class/fall14/cpsc425/notes/12-scheduling.html).
+- LNLL. MPI Exercise. [Link](https://computing.llnl.gov/tutorials/mpi/exercise.html).
+- FSU. MPI Examples. [Link](https://people.sc.fsu.edu/~jburkardt/c_src/mpi/mpi.html).
