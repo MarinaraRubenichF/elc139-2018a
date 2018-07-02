@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Cálculo de soma de dois quadrados com paralelismo</title>
+        </head>
+        <body>
+            <script src="../node_modules/paralleljs/lib/parallel.js"></script>
+            <script>
+                //FUNÇÃO PARALELZADA COM PARALLEL.JS
+
+                //var Parallel = require('paralleljs');
+
+                var elevaQuadradoP = {
+                    //Retorna o quadrado dos números passados por parâmetro
+                    pegaNumero: function(numero){
+                        return Math.pow(numero,2);
+                    }
+                }
+                var parallelObject = new Parallel([25,60]);
+                
+                parallelObject.map(elevaQuadradoP.pegaNumero).
+                        then(function(quadrado){
+                    console.time("Execução Paralela");
+                    console.log("Números: ", quadrado);
+                    console.log("Soma dos Quadrados: ", quadrado[0] + quadrado[1]);
+                    console.timeEnd("Execução Paralela");
+                });
+                
+                //FUNÇÃO UTILIZANDO SINGLETHREADS
+
+                function elevaQuadradoT(x) {
+                    return x * x;
+                }
+                   
+                function somaDosQuadrados(numeros) { 
+                    let soma = 0;
+                    
+                    console.time("Execução Sequencial");
+                    console.log("Números: ");
+                    for (let i = 0; i < numeros.length; i++) {
+                        soma += elevaQuadradoT(numeros[i]);
+                        console.log(elevaQuadradoT(numeros[i])); 
+                    }
+                    return(soma);
+                }
+                console.log("Soma dos Quadrados: ", somaDosQuadrados([25,60]));
+                console.timeEnd("Execução Sequencial");
+                
+            </script>
+        </body>
+    </html>
