@@ -34,3 +34,4 @@ Link para o [relatório](Relatório_Prog_Paralela).
 - Tableless Padrões Web. O que é JavaScript? Controlando o comportamento do HTML e o CSS. [Link](http://tableless.github.io/iniciantes/manual/js/).
 - Welihinda, Amanda; MaxWell, Faustein; Rangel Mathias. Parallel.js - Easy multi-core processing with javascript. [Link](https://parallel.js.org/).
 - WHATWG community. Web Workers. [Link](https://html.spec.whatwg.org/multipage/workers.html).
+- Wendel, Erick. Gerenciando o fluxo assíncrono de operações em NodeJS. [Link](https://imasters.com.br/desenvolvimento/gerenciando-o-fluxo-assincrono-de-operacoes-em-nodejs).
