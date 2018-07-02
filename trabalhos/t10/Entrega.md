@@ -15,7 +15,7 @@ Aluna: Marinara Rübenich Fumagalli
 Link para a pasta que contém os [códigos](Códigos).  
 
 ## 2. Relatório
-Link para o [relatório](Relatório_Prog_Paralela).
+Link para o [relatório](Relatório_Prog_Paralela.pdf).
 
 ## 3. Referências
 - Archibald, Jake. Promises em JavaScript: uma introdução. [Link](https://developers.google.com/web/fundamentals/primers/promises?hl=pt-br).
