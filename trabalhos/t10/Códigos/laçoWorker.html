@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Testando laço com Workers</title>
+    </head>
+    <body>
+        <center>
+            <h1><b>Workers x Sequencial</b></h1>
+                <br/>
+            <h4>Workers: uso de MultiThreads para JavaScript</h4>
+            <h3>
+                <div id="resParalelo"></div>
+                <div id="resParalelo1"></div>
+            </h3>
+            <h4>Threads: simulando Workers para JavaScript</h4>
+            <h3>
+                <div id="resThread"></div>
+                <div id="resThread1"></div>
+            </h3>
+        </center>     
+
+        <script language="javascript">
+            //UTILIZAÇÃO DE WEB WORKERS
+
+            //Função que permite que o script trabalhe como script principal e worker ao memso tempo, sem a necessidade de dois arquivos.js
+            var criaWorker = function(foo){
+                var str = foo.toString().match(/^\s*function\s*\(\s*\)\s*\{(([\s\S](?!\}$))*[\s\S])/)[1];
+                return window.URL.createObjectURL(
+                    new Blob([str],{type:'text/javascript'}));
+            }
+
+            //Web Worker: recebe um evento de uma String, enquanto o valor for menor que o passado por parâmetro: incrementa
+            var meuWorker = new Worker(criaWorker(function(){
+                self.addEventListener('message', function(e) {
+                    var valor = 0;
+                    while(valor <= e.data){
+                        self.postMessage(valor);
+                        valor++;
+                    }
+                }, false);
+            }));
+            //Listener para o trabalhador, obtém os resultados da 1ª função e mostra na tela os resultados
+            meuWorker.addEventListener('message', function(e) {
+              document.getElementById("resParalelo").innerHTML = e.data;
+            }, false);
+
+            var meuWorker1 = new Worker(criaWorker(function(){
+                self.addEventListener('message', function(e) {
+                    var valor = 0;
+                    while(valor <= e.data){
+                        self.postMessage(valor);
+                        valor++;
+                    }
+                }, false);
+            }));
+            meuWorker1.addEventListener('message', function(e) {
+              document.getElementById("resParalelo1").innerHTML = e.data;
+            }, false);
+
+            //Enviamos o valor máximo aos trabalhadores e damos início a contagem
+            meuWorker.postMessage(100000); 
+            meuWorker1.postMessage(100000); 
+
+            //UTILIZAÇÃO DE SINGLE THREADS
+            function minhaThread(valor, valorMax){
+                var este = this;
+                document.getElementById("resThread").innerHTML = valor;
+                valor++;
+                //Utiliza recursividade até chegar ao valor máximo passado por parâmetro, ou seja, todas vez que o valor for menor que o valor passado ele se chama novamente
+                if(valor <= valorMax)
+                    setTimeout(function () { este.minhaThread(valor, valorMax); }, 0);
+            }
+
+            function minhaThread1(valor, valorMax){
+                var este = this;
+                document.getElementById("resThread1").innerHTML = valor;
+                valor++;
+
+                if(valor <= valorMax)
+                    setTimeout(function () { este.minhaThread1(valor, valorMax); }, 0);
+            }
+
+            minhaThread(0, 100000);
+            minhaThread1(0, 100000);
+        </script>
+    </body>
+  </html>
